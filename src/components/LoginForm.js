@@ -28,8 +28,10 @@ handlePassInputChange = event => {
 preHandle = (e) =>{
   e.preventDefault()
   console.log(this.state)
-  if ((this.state.username != "") && (this.state.password != ""))
-    this.props.handleLogin(this.state.username, this.state.password)
+  let usr = this.state.username
+  let pwd = this.state.password
+  if ((usr != "") && (pwd != ""))
+    this.props.handleLogin(this.state)
 }
 
   render() {
